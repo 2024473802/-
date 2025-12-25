@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="适配多终端的企业级响应式官网示例，涵盖首页、产品、联系模块。">
+  <title>云杉科技 · 企业官网</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">云杉科技</div>
+    <nav class="nav" aria-label="主导航">
+      <a href="#home">首页</a>
+      <a href="#products">产品</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <div class="actions">
+      <button class="ghost" id="toggle-theme" aria-label="切换浅深色">切换主题</button>
+      <a class="primary" href="#contact">预约演示</a>
+    </div>
+    <button class="menu" id="menu-toggle" aria-label="展开导航">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <p class="pill">多终端 · 高性能 · 可扩展</p>
+        <h1>从零构建适配 PC 与移动端的企业官网</h1>
+        <p class="subtitle">快速上线、灵活配置，满足企业产品展示、品牌传播与客户转化需求。</p>
+        <div class="cta-group">
+          <a class="primary" href="#products">查看产品</a>
+          <a class="ghost" href="#contact">获取方案</a>
+        </div>
+        <div class="stats">
+          <div><span class="number">99.9%</span><span>可用性</span></div>
+          <div><span class="number">2 周</span><span>上线周期</span></div>
+          <div><span class="number">12+</span><span>终端适配</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>实时预览</h3>
+        <div class="devices">
+          <div class="device desktop">桌面端</div>
+          <div class="device tablet">平板端</div>
+          <div class="device mobile">移动端</div>
+        </div>
+        <p class="note">自动响应式布局，支持视网膜屏与深浅色模式。</p>
+      </div>
+    </section>
+
+    <section class="highlights" aria-label="建设要点">
+      <article>
+        <h3>语义化 HTML5</h3>
+        <p>提升 SEO 与可访问性，结构清晰便于后端渲染。</p>
+      </article>
+      <article>
+        <h3>CSS3 响应式</h3>
+        <p>使用弹性布局与媒体查询，保障多设备一致体验。</p>
+      </article>
+      <article>
+        <h3>JavaScript 交互</h3>
+        <p>前后端分离的动态数据加载与表单校验。</p>
+      </article>
+      <article>
+        <h3>模拟后端接口</h3>
+        <p>Node.js 提供产品与留言 API，便于联调与部署。</p>
+      </article>
+    </section>
+
+    <section class="panel" id="products">
+      <div class="panel-header">
+        <div>
+          <p class="pill">产品与方案</p>
+          <h2>组件化官网，开箱即用</h2>
+          <p class="subtitle">按需组合产品卡片、客户案例与联系方式，满足 B2B 展示诉求。</p>
+        </div>
+        <div class="legend">
+          <span class="dot success"></span> 实时在线
+          <span class="dot warning"></span> 升级中
+        </div>
+      </div>
+      <p id="product-status" class="subtitle" role="status" aria-live="polite"></p>
+      <div id="product-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="panel two-col" aria-label="多终端适配">
+      <div>
+        <p class="pill">多设备体验</p>
+        <h2>一套代码，多端呈现</h2>
+        <ul class="checks">
+          <li>流式栅格、弹性容器，适配桌面与窄屏。</li>
+          <li>SVG 与 CSS 变量确保高清与主题统一。</li>
+          <li>首屏动画与懒加载，兼顾性能与观感。</li>
+        </ul>
+      </div>
+      <div class="cards-stack">
+        <div class="card blur">桌面端：宽屏导航与三栏展示</div>
+        <div class="card blur">平板端：自适应两栏内容</div>
+        <div class="card highlight">移动端：折叠菜单与纵向滚动</div>
+      </div>
+    </section>
+
+    <section class="panel" id="contact">
+      <div class="panel-header">
+        <div>
+          <p class="pill">联系与演示</p>
+          <h2>告诉我们您的需求</h2>
+          <p class="subtitle">提交表单即可收到定制化方案与 Demo 访问。</p>
+        </div>
+        <div class="contact-info">
+          <p>电话：400-000-1234</p>
+          <p>邮箱：contact@example.com</p>
+          <p>地址：上海市浦东新区星谷路 88 号</p>
+        </div>
+      </div>
+      <div class="form-wrapper">
+        <form id="contact-form">
+          <div class="field">
+            <label for="name">姓名</label>
+            <input id="name" name="name" type="text" placeholder="请输入姓名" required>
+          </div>
+          <div class="field">
+            <label for="email">邮箱</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="message">需求描述</label>
+            <textarea id="message" name="message" rows="4" placeholder="请描述业务场景、预算或时间计划" required></textarea>
+          </div>
+          <div class="actions">
+            <button type="submit" class="primary">提交需求</button>
+            <p class="form-tip">提交后将通过模拟 API 返回确认信息。</p>
+          </div>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="form-note">
+          <h3>服务保障</h3>
+          <ul class="checks">
+            <li>7x24 运维监控与双活部署</li>
+            <li>ICP、隐私合规指引</li>
+            <li>CI/CD 与自动化测试示例</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4>云杉科技</h4>
+      <p>面向多终端的企业级官网与数字化运营解决方案。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">首页</a>
+      <a href="#products">产品</a>
+      <a href="#contact">联系</a>
+    </div>
+    <div class="footer-meta">© 2025 云杉科技 · 保留所有权利</div>
+  </footer>
+
+  <noscript>本页的导航折叠、产品加载与表单提交依赖 JavaScript。如无法启用，请通过电话 400-000-1234 或邮箱 contact@example.com 与我们联系。</noscript>
+  <script src="/script.js" defer></script>
+</body>
+</html>
